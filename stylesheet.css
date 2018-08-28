@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	padding:0;
+	margin:0;
+	text-align:center;
+	background:#CCC;
+}
+
+#hole{
+	width:1200px;
+	background:#F0F0F0;
+	text-align:left;
+	margin:0 auto;
+}
+
+.space{
+	height:10px;
+}
+
+#header{
+	width:100%;
+	height:200px;
+	background:#03F;
+}
+
+#container{
+	position:relative;
+	top:15px;
+	left:15px;
+	width:900px;
+	height:auto;
+	background:#960;
+	float:left;
+}
+
+#con{
+	position:relative;
+	top:15px;
+	right:15px;
+	height:1025px;
+	width:255px;
+	float:right;
+	background:#960;
+}
+
+.building{
+	position:relative;
+	width:100%;
+	height:200px;
+	background:#ccc;
+}
+
+.left{
+	position:relative;
+	top:10px;
+	left:10px;
+	width:350px;
+	height:180px;
+	float:left;
+}
+.mid{
+	position:relative;
+	top:15px;
+	left:30px;
+	width:auto;
+	height:36px;
+	font-size:36px;
+	float:left;
+	}
+
+.right{
+	word-wrap:break-word;  
+    word-break:break-all;  
+    overflow: hidden; 
+	position:relative;
+	top:30px;
+	left:35px;		
+	width:490px;
+	height:120px;
+	
+		float:left;
+}
+
+#footer{
+	position:relative;
+	top:50px;
+	width:100%;
+	height:200px;
+	background:#F0F;
+}
+
+.txt{
+	font-size:18px;
+
+}

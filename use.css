@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background:#F0F0F0;}
+
+.top{
+	position:relative;
+	background:#F1F1F1 url(src/index_title_bg.png) center center no-repeat ;
+	min-width:1000px;
+	width:100%;
+	height:120px;
+	margin:0 auto;
+}
+.top .logo{position: relative;float: left;top: 5px;left: 2.5%;}
+.top .name{position:relative;float:left;left:5%;top:30px;cursor:pointer;}
+.top .quit{position:relative;float:right;right:2.5%;top:30px;cursor:pointer;}
+
+.m{height:50px;width:1200px;margin:0 auto;}
+.m .m2{position:relative;float:left;top: 15px; font-size:24px;left:100px;}
+.m .m3{position:relative;float:left;top: 15px; font-size:24px;left:700px;}
+
+.middle{
+	background:#A1A3F7;
+	width:1200px;
+	height:850px;
+	margin:0 auto;
+}
+.middle_top{
+	position:relative;
+	background:#F3F3F3;
+	width:1150px;;
+	top:25px;
+	height:800px;
+	margin:0 auto;
+	text-align:center;
+}
+.middle_left{
+	float:left;
+	width:895px;
+	height:auto;
+	text-align:center;
+}
+.middle_middle{
+	float:left;
+	background:#A1A3F7;
+	width:25px;
+	height:800px;
+}
+.middle_right{
+	float:right;
+	width:230px;
+	text-align:center;
+}
+span{
+	font-size:36px;
+	color:red;
+}	
+
+table,tr,td{border:1px solid blue;}
+
+td{text-align:center;vertical-align:central;}
+
+.td1{text-align:left;}
+.td2{text-align:right;}
+.facitily{float:left;width:895px;}
+.admin{float:right;width:230px;}
+.sheshi{width:1150px;;}

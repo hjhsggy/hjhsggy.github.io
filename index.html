@@ -1,0 +1,269 @@
+﻿<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<!doctype html>
+<html>
+<head>
+<link href="index.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<meta charset="utf-8">
+<title>校园服务设施信息</title>
+<script>
+    function change(){
+		var w=document.body.clientWidth;
+		if(w<=1200)
+		{
+			var title=document.getElementById("title");
+			title.style.width="950px";
+			var middle=document.getElementById("middle");
+			middle.style.width="950px";
+		}
+	}
+</script>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+html, body { background: #333 url("http://codepen.io/images/classy_fabric.png"); }
+
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+	background: rgba(0, 0, 0, 0.8);
+}
+</style>
+<script src="prefixfree.min.js"></script>
+</head>
+
+<body class="index">
+
+<div class="top">
+<img src="src/logo1.png" width="344" height="110" class="logo">
+  <div class="login"><a href="login.jsp"><img src="src/login.png" /></a></div> 
+</div>
+<div class="title">
+<div class="txt" onclick="window.location='index.jsp'"><p>首　　页</p></div>
+<div class="txt" onclick="window.location='search.html'"><p>服务设施</p></div>
+<div class="txt" onclick="window.location='http://www.xsyu.edu.cn'"><p>校园生活</p></div>
+<div class="txt" onclick="window.location='news.html'"><p>新　　闻</p></div>
+</div>
+
+<div class="middle">
+  <span class="slide"><img src="src/e446f771bba999696edbcbc2e93da8b8_IMG_9642.jpg" /></span>
+  <div class="middle_left">
+    <div class="middle_left_top">
+        <div class="middle_left_top_picture">
+         <ul class="slides">
+				<input type="radio" name="radio-btn" id="img-1" checked />
+					<li class="slide-container">
+					<div class="slide">
+						<img src="src/01200000030969134401057982610_s.jpg" />
+					</div>
+					<div class="nav">
+						<label for="img-6" class="prev">&#x2039;</label>
+						<label for="img-2" class="next">&#x203a;</label>
+					</div>
+					</li>
+
+				<input type="radio" name="radio-btn" id="img-2" />
+					<li class="slide-container">
+					<div class="slide">
+						<img src="src/IMG_20180612_194102.jpg" />
+					</div>
+					<div class="nav">
+					<label for="img-1" class="prev">&#x2039;</label>
+					<label for="img-3" class="next">&#x203a;</label>
+					</div>
+					</li>
+
+				 <input type="radio" name="radio-btn" id="img-3" />
+					<li class="slide-container">
+					<div class="slide">
+						<img src="src/8192711d45935d97a764027eefc240ff_201312092112752271.jpg" />
+					</div>
+					<div class="nav">
+					<label for="img-2" class="prev">&#x2039;</label>
+					<label for="img-4" class="next">&#x203a;</label>
+					</div>
+					</li>
+
+				<input type="radio" name="radio-btn" id="img-4" />
+					<li class="slide-container">
+					<div class="slide">
+						<img src="src/b35b6b1bf9fa02f933faf93a8335334a_1387708396818_j1q8s7.png" />
+					</div>
+					<div class="nav">
+					<label for="img-3" class="prev">&#x2039;</label>
+					<label for="img-5" class="next">&#x203a;</label>
+					</div>
+					</li>
+
+				<input type="radio" name="radio-btn" id="img-5" />
+					<li class="slide-container">
+						<div class="slide">
+						  <img src="src/QQ图片20180609001924.jpg" />
+						</div>
+						<div class="nav">
+							<label for="img-4" class="prev">&#x2039;</label>
+							<label for="img-6" class="next">&#x203a;</label>
+						</div>
+					</li>
+
+				<input type="radio" name="radio-btn" id="img-6" />
+					<li class="slide-container">
+						<div class="slide"></div>
+						<div class="nav">
+							<label for="img-5" class="prev">&#x2039;</label>
+							<label for="img-1" class="next">&#x203a;</label>
+						</div>
+					</li>
+
+				<li class="nav-dots">
+				  <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+				  <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+				  <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+				  <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+				  <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+				  <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+				</li>
+		    </ul>
+      </div>
+      </div>
+  </div>	
+  <div class="middle_right">
+    <div class="wenben">
+      <span>图 书 馆</span> 
+    </div>
+    <div class="wenben">
+      <span>教 学 楼</span> 
+    </div>
+    <div class="wenben">
+      <span>医 务 室</span> 
+    </div>
+    <div class="wenben">
+      <span>操　　场</span>
+    </div>
+    <div class="wenben">  
+      <span>学生食堂</span> 
+    </div>
+    <div class="wenben">
+      <span>学生澡堂</span> 
+    </div>
+    <div class="wenben">
+      <span>学生超市</span> 
+    </div>
+  </div>
+  <div class="clear"></div>    
+</div>
+
+<div class="end">
+	<div>
+		<div id="bottom">
+		<center><img src="src/bottem.png"></center>
+		</div>
+	</div>
+</div>
+</body>
+</html>
